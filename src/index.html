@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <style> -->
+
+  </style>
+</head>
+<body>
+  <article class="card shadow">
+    <figure class="hero">
+      <img src="../images/drawers.jpg" alt="image of drawers">
+    </figure>
+    <div class="desktop-content">
+      <div class="content">
+        <span class="summary">
+          <h4>Shift the overall look and feel by adding these wonderful 
+            touches to furniture in your home</h4>
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps 
+            it felt slightly bare and uninviting. I’ve got some simple tips 
+            to help you make any room feel complete.
+          </p>
+        </span>
+      </div>
+      <span id="footer">
+        <span id="author">
+          <img src="../images/avatar-michelle.jpg" alt="photo of michelle">
+          <span class="author-info">
+            <h5>Michelle Appleton</h5>
+            <p>28 Jun 2020</p> 
+          </span>
+        </span>
+        <span id="social-mobile">
+          <p>SHARE</p>
+          <span class="social-links">
+            <a href="#">
+              <img src="../images/icon-facebook.svg" alt=""></a>
+            <a href="#">
+              <img src="../images/icon-twitter.svg" alt=""></a>
+            <a href="#">
+              <img src="../images/icon-pinterest.svg" alt=""></a>
+          </span>
+
+          <div class="triangle"></div>
+        </span>
+        <span id="button" onclick="shareBtn()">
+          <object id="share-icon" data="../images/icon-share.svg" type="image/svg+xml"><object/>
+        </span>
+  
+      </span>
+    </div>
+ 
+
+  </article>
+
+  <script>
+    var toggle = true;
+    function shareBtn(){
+      let socialMobile = document.getElementById("social-mobile");
+      let svg = document.getElementById('share-icon').getSVGDocument().childNodes[0].childNodes[0]
+      if(toggle){
+
+        socialMobile.style.display = "flex";
+        button.style.backgroundColor = "hsl(212, 23%, 69%)";
+        svg.style.fill="white"
+      }
+      else{
+
+        socialMobile.style.display = "none";
+        button.style.backgroundColor = "";
+        svg.style.fill=""
+      }
+      toggle = !toggle
+    }
+
+  </script>
+
+</body>
+</html>
